@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>grail layout</title>
+    <style media="screen">
+    p {
+      margin: 0 auto;
+      display:block;
+      font-family: Arial;
+      font-size:25px;
+    }
+
+    body {
+        min-width: 550px;
+    }
+    
+    .col {
+        position: relative;
+        float: left;
+    }
+
+    #header , #footer {
+      min-height: 40px;
+      background-color: #AAAAAA;
+      height: 20%;
+    }
+    
+    #container {
+        padding: 0 190px 0 190px;
+    }
+
+    #container:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    
+    #main {
+        width: 100%;
+        height: 400px;
+        background-color: #CCCC55;
+    }
+    
+    #left {
+        width: 190px;
+        height: 400px;
+        margin-left: -100%;
+        left: -190px;
+        background-color: #FF77FF;
+    }
+    
+    #right {
+        width: 190px;
+        height: 400px;
+        margin-left: -190px;
+        right: -190px;
+        background-color: #FF0000;
+    }
+    </style>
+</head>
+
+<body>
+<div id="header">
+  <p>#header</p>
+</div>
+    <div id="container">
+        <div id="main" class="col">
+            <p>#main</p>
+        </div>
+        <div id="left" class="col">
+            <p>#left</p>
+        </div>
+        <div id="right" class="col">
+            <p>#right</p>
+        </div>
+    </div>
+    <div id="footer">
+      <p>#footer</p>
+    </div>
+</body>
+
+</html>
